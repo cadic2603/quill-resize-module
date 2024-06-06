@@ -118,6 +118,10 @@ export default class Resize extends BaseModule {
       size.height = Math.round(this.preDragSize.height + deltaY * direction)
     }
 
+    if (size.width === 0 || size.height === 0) {
+      return
+    }
+
     Object.assign(this.activeEle.style, this.calcSize(size, options.limit))
     this.requestUpdate()
   }
