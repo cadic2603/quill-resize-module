@@ -2,7 +2,7 @@ import _Quill from 'quill'
 const Quill = window.Quill || _Quill
 
 // BEGIN allow image alignment styles
-const ATTRIBUTES = ['alt', 'height', 'width', 'style', 'data-size']
+const ATTRIBUTES = ['alt', 'height', 'width', 'style', 'data-size', 'class']
 
 var BaseImageFormat = Quill.import('formats/image')
 class Image extends BaseImageFormat {
